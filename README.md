@@ -1,87 +1,58 @@
-# 🔐 Password Management System in AWS (Passbolt)
+# ☁️ Host a Password Manager in the Cloud (Passbolt)
 
 ## 🎯 Objective
-To securely host and manage complex passwords in the cloud using **Passbolt**, leveraging **AWS infrastructure** for scalability, security, and accessibility.
+Deploy and configure **Passbolt**, a self-hosted password manager, on AWS to demonstrate secure credential management and cloud infrastructure setup.
 
 ---
 
-## 🧰 Tools & Technologies Used
-- **Passbolt** (self-hosted password manager)
-- **AWS EC2** (virtual server hosting)
-- **AWS Route 53** (domain hosting and DNS management)
-- **Nginx** (web server)
-- **Let’s Encrypt / Certbot** (SSL certificate setup)
-- **HTTPS Encryption**
+## 🧰 Tools Used
+- **AWS EC2 (Ubuntu Server 22.04)**
+- **Passbolt**
+- **SSH**
+- **Ubuntu Terminal**
+- **HTTP (Local Access)**
 
 ---
 
 ## ⚙️ Steps Performed
 
-1. **Provisioned an EC2 Instance**
-   - Launched an Ubuntu-based EC2 instance on AWS.
-   - Configured inbound security groups for HTTP (80), HTTPS (443), and SSH (22).
+1. **Provisioned the Cloud Environment**
+   - Launched an **EC2 instance** running Ubuntu Server 22.04.
+   - Configured security groups to allow inbound connections via ports **80 (HTTP)** and **22 (SSH)**.
 
-2. **Installed and Configured Passbolt**
-   - Deployed **Passbolt CE (Community Edition)** on the EC2 instance.
-   - Configured the database, PHP, and Nginx dependencies.
-   - Verified successful installation and access through the server’s public IP.
+2. **Generated SSH Key Pair**
+   - Created a key pair on the local Ubuntu system.
+   - Connected securely to the EC2 instance via SSH using the private key.
 
-3. **Secured with HTTPS**
-   - Installed **Certbot** to enable **SSL encryption** for the Passbolt domain.
-   - Enforced HTTPS redirection in Nginx configuration.
+3. **Installed and Configured Passbolt**
+   - Completed Passbolt setup through the terminal installer.
+   - Accessed Passbolt using the public IP address via HTTP.
 
-4. **Configured Domain and DNS**
-   - Purchased or configured a domain name via **AWS Route 53**.
-   - Linked the EC2 instance’s public IP to the domain’s A record.
-   - Ensured accessibility via the domain (e.g., `https://passwordvault.example.com`).
+4. **Domain and Accessibility Configuration**
+   - Configured hosting and DNS records for the Passbolt domain (for future HTTPS setup).
+   - Verified external accessibility of the web interface.
 
-5. **Implemented Password Management Features**
-   - Configured user accounts and groups within Passbolt.
-   - Demonstrated secure creation, storage, and sharing of complex passwords.
-   - Verified encryption during transmission and storage.
+5. **Security Considerations**
+   - Chose **HTTP** temporarily for testing due to lack of domain SSL certification.
+   - Noted that **HTTPS encryption** would be essential for production use to protect credentials in transit.
 
-6. **Maintenance and Monitoring**
-   - Set up instance monitoring through AWS CloudWatch.
-   - Regularly updated the Passbolt instance and SSL certificates for continued security.
+6. **Password Management**
+   - Created and stored complex passwords within Passbolt.
+   - Tested secure storage and retrieval functionality.
 
 ---
 
 ## 📸 Screenshots
-
-Include **4–5 concise screenshots** showing the most relevant parts of your project:
-
-| Screenshot | Description |
-|-------------|--------------|
-| ![EC2 Dashboard](./images/aws-ec2-instance.png) | AWS EC2 instance running Passbolt |
-| ![Passbolt Login Page](./images/passbolt-login.png) | Secure login interface via HTTPS |
-| ![Passbolt Dashboard](./images/passbolt-dashboard.png) | Password management dashboard |
-| ![Certbot SSL Confirmation](./images/ssl-setup.png) | SSL/HTTPS successfully configured |
-| ![AWS Route 53 Configuration](./images/aws-route53.png) | Domain pointing to Passbolt instance |
-
-💡 *Avoid showing sensitive data such as domain names, internal IPs, or credentials.*
-
----
-
-## 🔒 Security Highlights
-
-- Enforced HTTPS encryption for secure communication.
-- Hosted Passbolt in a controlled AWS environment with strict security group rules.
-- Used **self-hosted** architecture to eliminate third-party password storage risks.
-- Enhanced data protection and operational availability via AWS services.
+1. **AWS EC2 instance dashboard** *(instance running and accessible)*  
+2. **SSH terminal connection to Ubuntu server**  
+3. **Passbolt setup interface**  
+4. **Password manager dashboard** *(showing stored credentials)*  
 
 ---
 
 ## 🧩 Key Takeaways
+- Gained hands-on experience hosting a web application securely on AWS.  
+- Understood cloud instance management, key-based SSH authentication, and domain configuration.  
+- Learned how self-hosted password managers like Passbolt enhance data protection and credential control.  
+- Identified the importance of implementing HTTPS for secure data transmission in production.
 
-- Gained practical experience deploying and securing a self-hosted web application in AWS.
-- Strengthened understanding of encryption, domain configuration, and cloud resource management.
-- Built confidence in maintaining secure, accessible cloud-based applications.
-
----
-
-## 🧰 Next Steps (Optional Improvements)
-
-- Automate SSL renewal with a cron job.  
-- Implement AWS Backup for EC2 snapshots.  
-- Integrate AWS IAM for user-based access control.  
-- Add MFA and logging to enhance overall system security.
