@@ -43,10 +43,14 @@ Deploy and configure **Passbolt**, a self-hosted password manager, on AWS to dem
 ---
 
 ## 📸 Screenshots
-1. **AWS EC2 instance dashboard** *(instance running and accessible)*  
-2. **SSH terminal connection to Ubuntu server**  
-3. **Passbolt setup interface**  
-4. **Password manager dashboard** *(showing stored credentials)*  
+1. **AWS EC2 instance dashboard** *(instance running and accessible)*  <img width="1261" height="640" alt="Screenshot 2025-10-12 003019" src="https://github.com/user-attachments/assets/4827f5a9-8ba5-4d75-92ba-24d19ec76f1c" />
+
+2. **Generating key pair via Parrot**  <img width="1021" height="648" alt="Screenshot 2025-10-11 235940" src="https://github.com/user-attachments/assets/28900e4f-8f23-404f-ac63-f8e566c22ea8" />
+
+3. **Passbolt access via HTTP**  <img width="1270" height="849" alt="Screenshot 2025-10-11 235655" src="https://github.com/user-attachments/assets/2d8da7de-fcf0-4725-95dc-28b3bbe4da9c" />
+
+4. **Password manager dashboard** <img width="2067" height="815" alt="Screenshot 2025-10-11 235615" src="https://github.com/user-attachments/assets/6d4bbf25-a6d8-47f7-bd0b-b8b3cca2bf0a" />
+  
 
 ---
 
