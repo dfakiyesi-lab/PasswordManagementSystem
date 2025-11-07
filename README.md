@@ -1,11 +1,11 @@
-# ☁️ Host a Password Manager in the Cloud (Passbolt)
+# ☁️ Host a Password Management System in AWS (Passbolt)
 
-## 🎯 Objective
+## Objective
 Deploy and configure **Passbolt**, a self-hosted password manager, on AWS to demonstrate secure credential management and cloud infrastructure setup.
 
 ---
 
-## 🧰 Tools Used
+## Tools Used
 - **AWS EC2 (Ubuntu Server 22.04)**
 - **Passbolt**
 - **SSH**
@@ -14,7 +14,7 @@ Deploy and configure **Passbolt**, a self-hosted password manager, on AWS to dem
 
 ---
 
-## ⚙️ Steps Performed
+## Steps Performed
 
 1. **Provisioned the Cloud Environment**
    - Launched an **EC2 instance** running Ubuntu Server 22.04.
@@ -54,7 +54,7 @@ Deploy and configure **Passbolt**, a self-hosted password manager, on AWS to dem
 
 ---
 
-## 🧩 Key Takeaways
+## Key Takeaways
 - Gained hands-on experience hosting a web application securely on AWS.  
 - Understood cloud instance management, key-based SSH authentication, and domain configuration.  
 - Learned how self-hosted password managers like Passbolt enhance data protection and credential control.  
